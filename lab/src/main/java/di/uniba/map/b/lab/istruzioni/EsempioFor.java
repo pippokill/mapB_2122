@@ -31,7 +31,7 @@ public class EsempioFor {
         }
         System.out.println("======================");
         //Esempi di for-each
-        int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] numbers = {10, 2, 3, 47, 5, 6, 7, 8, 9, 10};
         for (int item : numbers) {
             System.out.println("Count is: " + item);
         }
