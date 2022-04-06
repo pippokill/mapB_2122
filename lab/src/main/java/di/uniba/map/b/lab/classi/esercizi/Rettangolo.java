@@ -26,7 +26,7 @@ public class Rettangolo extends FiguraComp {
      */
     @Override
     public double area() {
-        return super.dim1 * super.dim2;
+        return dim1 * dim2;
     }
 
     /**
@@ -34,7 +34,7 @@ public class Rettangolo extends FiguraComp {
      * @return
      */
     public String toString() {
-        return "Rettangolo di dimensioni " + super.dim1 + ", " + super.dim2;
+        return "Rettangolo di dimensioni " + dim1 + ", " + dim2;
     }
 
 }

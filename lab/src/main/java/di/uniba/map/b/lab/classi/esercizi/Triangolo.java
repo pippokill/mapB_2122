@@ -26,7 +26,7 @@ public class Triangolo extends FiguraComp {
      */
     @Override
     public double area() {
-        return super.dim1 * super.dim2 / 2;
+        return dim1 * dim2 / 2;
     }
 
     /**
@@ -35,7 +35,7 @@ public class Triangolo extends FiguraComp {
      */
     @Override
     public String toString() {
-        return "Triangolo con dimensioni " + super.dim1 + ", " + super.dim2;
+        return "Triangolo con dimensioni " + dim1 + ", " + dim2;
     }
 
 }

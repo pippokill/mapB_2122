@@ -24,7 +24,7 @@ public class Quadrato extends Rettangolo {
      * @return
      */
     public String toString() {
-        return "Quadrato di lato " + super.dim1;
+        return "Quadrato di lato " + dim1;
     }
 
 }
