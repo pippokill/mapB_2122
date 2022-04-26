@@ -31,7 +31,7 @@ public class EsercizioMap {
      */
     public static void main(String[] args) {
         Map<String, Integer> map = new HashMap<>();
-        for (String s : args[0].split(" ")) {
+        for (String s : args[0].split("\\s+")) {
             Integer count = map.get(s);
             //map.put(s, (count == null) ? 1 : count + 1);
             if (count == null) {
