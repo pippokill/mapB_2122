@@ -28,7 +28,7 @@ public class TestException {
      */
     public static void main(String[] args) {
         try {
-            MailParser.checkMail("pippo.mail@mail.com");
+            MailParser.checkMail("pippo.m");
             System.out.println("Indirizzo mail valido");
         } catch (EmailException ex) {
             System.err.println("Errore nel controllo dell'indirizzo: " + ex.getMessage());

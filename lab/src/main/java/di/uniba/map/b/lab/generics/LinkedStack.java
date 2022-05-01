@@ -62,4 +62,10 @@ public class LinkedStack<T> {
         }
         return result;
     }
+    
+    public static void main(String[] args) {
+        LinkedStack<String> s=new LinkedStack<>();
+        s.push("pippo");
+        System.out.println(s.pop());
+    }
 }

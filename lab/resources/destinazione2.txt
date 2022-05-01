@@ -1,0 +1,3 @@
+Il Commodore 64 (abbreviazioni diffuse: C64, C=64) è un home computer della Commodore Business Machines Inc. commercializzato dal 1982 al 1994.
+
+Fu immesso sul mercato due anni dopo il Commodore VIC-20, con capacità di memoria, grafiche e sonore superiori rispetto a quest'ultimo, oltre a una buona compatibilità con le sue periferiche. La macchina venne venduta sino al fallimento della società, ed è stata la più venduta nella storia dell'informatica, con diversi milioni di unità prodotte e vendute. Il successivo Commodore 128 ne mantenne la compatibilità hardware e software grazie a una modalità dedicata.

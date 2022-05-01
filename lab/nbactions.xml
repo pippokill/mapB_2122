@@ -12,9 +12,9 @@
             <properties>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
-                <exec.mainClass>di.uniba.map.b.lab.collection.EsercizioMap</exec.mainClass>
+                <exec.mainClass>di.uniba.map.b.lab.eccezioni.NumberException</exec.mainClass>
                 <exec.vmArgs></exec.vmArgs>
-                <exec.appArgs>"pippo topolino pippo pluto topolino paperino"</exec.appArgs>
+                <exec.appArgs>56.78</exec.appArgs>
             </properties>
         </action>
         <action>
@@ -30,9 +30,9 @@
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
                 <jpda.listen>true</jpda.listen>
-                <exec.mainClass>di.uniba.map.b.lab.collection.EsercizioMap</exec.mainClass>
+                <exec.mainClass>di.uniba.map.b.lab.eccezioni.NumberException</exec.mainClass>
                 <exec.vmArgs>-agentlib:jdwp=transport=dt_socket,server=n,address=${jpda.address}</exec.vmArgs>
-                <exec.appArgs>"pippo topolino pippo pluto topolino paperino"</exec.appArgs>
+                <exec.appArgs>56.78</exec.appArgs>
             </properties>
         </action>
         <action>
@@ -47,9 +47,9 @@
             <properties>
                 <exec.args>${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}</exec.args>
                 <exec.executable>java</exec.executable>
-                <exec.mainClass>di.uniba.map.b.lab.collection.EsercizioMap</exec.mainClass>
+                <exec.mainClass>di.uniba.map.b.lab.eccezioni.NumberException</exec.mainClass>
                 <exec.vmArgs></exec.vmArgs>
-                <exec.appArgs>"pippo topolino pippo pluto topolino paperino"</exec.appArgs>
+                <exec.appArgs>56.78</exec.appArgs>
             </properties>
         </action>
     </actions>
