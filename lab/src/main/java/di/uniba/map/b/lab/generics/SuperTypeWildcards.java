@@ -16,6 +16,7 @@
  */
 package di.uniba.map.b.lab.generics;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,4 +30,15 @@ public class SuperTypeWildcards {
         apples.add(new Jonathan());
         //apples.add(new Fruit()); // Fruit doesn’t extend Apple
     }
+    
+    public static void main(String[] args) {
+        List<Object> l=new ArrayList<>();
+        writeTo(l);
+        List<Fruit> f=new ArrayList<>();
+        writeTo(f);
+        //List<Jonathan> j=new ArrayList<>();
+        //writeTo(j);
+    }
+    
+    
 }

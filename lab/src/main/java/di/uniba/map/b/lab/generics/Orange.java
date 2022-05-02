@@ -22,4 +22,8 @@ package di.uniba.map.b.lab.generics;
  */
 public class Orange extends Fruit {
     
+     public String toString() {
+        return "Orange";
+    }
+    
 }

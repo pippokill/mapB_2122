@@ -33,7 +33,6 @@ public class GenericsAndCovariance {
         // Wildcards allow covariance:
         List<? extends Fruit> flist = new ArrayList<Apple>();
         // Compile Error: can't add any type of object:
-        //flist.add(new Apple());
         //flist.add(new Fruit());
         //flist.add(new Object());
         flist.add(null); // Legal but uninteresting

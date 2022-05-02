@@ -22,4 +22,8 @@ package di.uniba.map.b.lab.generics;
  */
 public class Jonathan extends Apple {
     
+     public String toString() {
+        return "Jonathan";
+    }
+    
 }
