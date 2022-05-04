@@ -44,7 +44,7 @@ public class Engine {
 
     public void execute() {
         System.out.println("================================");
-        System.out.println("* Adventure v. 0.2 - 2020-2021 *");
+        System.out.println("* Adventure v. 0.3 - 2021-2022 *");
         System.out.println("================================");
         System.out.println(game.getCurrentRoom().getName());
         System.out.println();
@@ -54,7 +54,9 @@ public class Engine {
         while (scanner.hasNextLine()) {
             String command = scanner.nextLine();
             ParserOutput p = parser.parse(command, game.getCommands(), game.getCurrentRoom().getObjects(), game.getInventory());
-            if (p.getCommand() != null && p.getCommand().getType() == CommandType.END) {
+            if (p == null || p.getCommand() == null) {
+                System.out.println("Non capisco quello che mi vuoi dire.");
+            } else if (p.getCommand() != null && p.getCommand().getType() == CommandType.END) {
                 System.out.println("Addio!");
                 break;
             } else {
