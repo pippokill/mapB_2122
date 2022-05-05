@@ -82,7 +82,7 @@ public class EsempiJDBC {
             }
             rs.close();
             stm.close();
-            DatabaseMetaData metaData = conn.getMetaData();
+            //DatabaseMetaData metaData = conn.getMetaData();
             conn.close();
         } catch (SQLException ex) {
             System.err.println(ex.getSQLState() + ": " + ex.getMessage());
