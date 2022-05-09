@@ -20,14 +20,30 @@ package di.uniba.map.b.lab.concorrente;
  *
  * @author pierpaolo
  */
-public class HelloThread extends Thread {
+public class MsgThread extends Thread {
+    
+    private String msg;
+    
+    private int sec;
+    
+    public MsgThread(String msg, int sec) {
+        super();
+        this.msg=msg;
+        this.sec=sec;
+    }
 
     /**
      *
      */
     @Override
     public void run() {
-        System.out.println("Hello from a thread!");
+        try {
+            sleep(sec*1000);
+        } catch (InterruptedException ex) {
+            System.out.println("Mi hai interrotto.");
+            return;
+        }
+        System.out.println(msg);
     }
 
     /**
@@ -35,10 +51,22 @@ public class HelloThread extends Thread {
      * @param args
      */
     public static void main(String args[]) {
-        Thread t1 = new HelloThread();
-        Thread t2 = new HelloThread();
+        Thread t1 = new MsgThread("Ciao",4);
         t1.start();
-        t2.start();
+        
+        // Test join
+        /*try {
+            t1.join();
+        } catch (InterruptedException ex) {
+            System.err.println(ex);
+        }*/
+        for (int i=0;i<4;i++) {
+            System.out.println(i);
+            System.out.println(t1.isInterrupted());
+        }
+        t1.interrupt();
+        System.out.println(t1.isInterrupted());
+
     }
 
 }
