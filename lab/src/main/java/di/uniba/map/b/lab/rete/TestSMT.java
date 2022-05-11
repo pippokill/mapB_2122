@@ -6,8 +6,6 @@
 package di.uniba.map.b.lab.rete;
 
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *

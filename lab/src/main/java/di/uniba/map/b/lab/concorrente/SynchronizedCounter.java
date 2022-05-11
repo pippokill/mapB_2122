@@ -16,6 +16,9 @@
  */
 package di.uniba.map.b.lab.concorrente;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author pierpaolo
@@ -24,11 +27,16 @@ public class SynchronizedCounter {
 
     private int c = 0;
 
+    private int d = 0;
+
+    private int i = 0;
+
     /**
      *
      */
     public synchronized void increment() {
         c++;
+        i++;
     }
 
     /**
@@ -36,6 +44,7 @@ public class SynchronizedCounter {
      */
     public synchronized void decrement() {
         c--;
+        d++;
     }
 
     /**
@@ -45,20 +54,31 @@ public class SynchronizedCounter {
     public synchronized int value() {
         return c;
     }
-    
+
+    public String toString() {
+        return d + " " + i;
+    }
+
     /**
      *
      * @param args
      * @throws InterruptedException
      */
     public static void main(String[] args) throws InterruptedException {
-        SynchronizedCounter sc=new SynchronizedCounter();
-        for (int i=0;i<100;i++) {
-            Thread t=new CounterThread(sc);
+        SynchronizedCounter sc = new SynchronizedCounter();
+        List<Thread> l = new ArrayList();
+        for (int i = 0; i < 100; i++) {
+            Thread t = new CounterThread(sc);
+            l.add(t);
+        }
+        for (Thread t : l) {
             t.start();
         }
-        Thread.sleep(5000);
+        for (Thread t : l) {
+            t.join();
+        }
         System.out.println(sc.value());
+        System.out.println(sc);
     }
-    
+
 }
