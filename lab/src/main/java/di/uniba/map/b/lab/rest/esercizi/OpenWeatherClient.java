@@ -40,7 +40,7 @@ public class OpenWeatherClient {
      */
     public static String getWeatherByCity(String city) {
         Client client = ClientBuilder.newClient();
-        WebTarget target = client.target("http://api.openweathermap.org/data/2.5");
+        WebTarget target = client.target("https://api.openweathermap.org/data/2.5");
         Response resp = target.path("weather")
                 .queryParam("appid", API_KEY)
                 .queryParam("q", city)
@@ -56,7 +56,7 @@ public class OpenWeatherClient {
      */
     public static String getWeatherByCoordinates(double lat, double lon) {
         Client client = ClientBuilder.newClient();
-        WebTarget target = client.target("http://api.openweathermap.org/data/2.5");
+        WebTarget target = client.target("https://api.openweathermap.org/data/2.5");
         Response resp = target.path("weather")
                 .queryParam("appid", API_KEY)
                 .queryParam("lat", lat)

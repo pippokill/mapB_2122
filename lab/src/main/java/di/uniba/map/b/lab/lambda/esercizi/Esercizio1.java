@@ -87,21 +87,21 @@ public class Esercizio1 {
             System.out.println(es6);
             //NB: questa implementazione è più lenta in quanto ogni volta devo cercare nella lista dei movie
             /*double es6_1 = movielens.getRatings().stream()
-            .filter(r -> {
-            int idx = movielens.getMovies().indexOf(new Movie(r.getMovieId(), ""));
-            if (idx >= 0 && movielens.getMovies().get(idx).getGenres().contains("Comedy")) {
-            return true;
-            } else {
-            return false;
-            }
-            })
-            .mapToDouble(r -> r.getRating())
-            .average().getAsDouble();
+                    .filter(r -> {
+                        int idx = movielens.getMovies().indexOf(new Movie(r.getMovieId(), ""));
+                        if (idx >= 0 && movielens.getMovies().get(idx).getGenres().contains("Comedy")) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    })
+                    .mapToDouble(r -> r.getRating())
+                    .average().getAsDouble();
             System.out.println(es6_1);*/
             //7. calcolare il rating medio raggruppando per genere del movie
             //viene riutilizzata la prima soluzione dell'esercizio 6 che viene applicata ad
             //ogni genere
-            Map<String,Double> gavg=new HashMap();
+            Map<String, Double> gavg = new HashMap();
             movielens.getMovies().stream()
                     .flatMap(m -> m.getGenres().stream())
                     .collect(Collectors.toSet())
@@ -114,7 +114,7 @@ public class Esercizio1 {
                                 .filter(r -> movieset.contains(r.getMovieId()))
                                 .mapToDouble(r -> r.getRating())
                                 .average().getAsDouble();
-                        gavg.put(g,avg);
+                        gavg.put(g, avg);
                     });
             System.out.println(gavg);
         } catch (IOException ex) {
